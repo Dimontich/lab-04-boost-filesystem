@@ -104,7 +104,6 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
                     value.counter++;
                 }
             } else if (boost::filesystem::is_directory(x)) {
-
                 _DirectoryAnalyzer(x.path(), ++tab, x.path().string());
             } else if (boost::filesystem::is_symlink(x)) {
                 boost::filesystem::path symlink = read_symlink(x);
@@ -125,7 +124,6 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
     catch(const boost::filesystem::filesystem_error& e){
         throw e;
     }
-
 }
 std::vector <int> DirectoryAnalyzer::checkNameFile(std::string name){
     std::vector <int> value;
