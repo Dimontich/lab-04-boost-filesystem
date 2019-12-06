@@ -1,5 +1,4 @@
 #include "../include/broker.h"
-
 DirectoryAnalyzer::DirectoryAnalyzer(boost::filesystem::path _path) {
     if (_path == " ") {
         _path = "/home/danila/CLionProjects/lab-04-boost-filesystem/";
