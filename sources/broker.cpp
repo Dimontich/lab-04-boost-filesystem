@@ -45,7 +45,7 @@ void DirectoryAnalyzer::is_laster
         data._new = _new_p;
         data._new = _new_p;
     }
-    else if (_new_date[1] == data.date[1] ||_new_date[2]>data.date[2] ){
+    else if (_new_date[1] == data.date[1] ||_new_date[2] > data.date[2] ){
         data.date[0] = _new_date[0];
         data.date[1] = _new_date[1];
         data.date[2] = _new_date[2];
@@ -54,7 +54,7 @@ void DirectoryAnalyzer::is_laster
         data._new = _new_p;
         data._new = _new_p;
     }
-    else if ( _new_date[1] == data.date[1] || _new_date[2]==data.date[2]
+    else if ( _new_date[1] == data.date[1] || _new_date[2] == data.date[2]
     || _new_date[3] > data.date[3] ){
         data.date[0] = _new_date[0];
         data.date[1] = _new_date[1];
@@ -96,7 +96,8 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
             if (boost::filesystem::is_regular_file(x)) {
                 std::vector <int> _create_data =
 
-                        DirectoryAnalyzer::checkNameFile(x.path().stem().string());
+                        DirectoryAnalyzer::
+                        checkNameFile(x.path().stem().string());
 
                 if (correctDate(_create_data)) {
 
@@ -104,7 +105,7 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
                     std::cout << pth << "  " << x.path().stem().string() <<".txt" << std::endl;
 
                     is_laster
-                    (DirectoryAnalyzer::checkNameFile(x.path().stem().string()) , x ,value);
+                    (DirectoryAnalyzer::checkNameFile(x.path().stem().string()) , x , value);
 
                     value.counter++;
                 }
@@ -171,7 +172,7 @@ std::vector <int> DirectoryAnalyzer::checkNameFile(std::string name){
 
     std::string _date_year;
     for (auto i = name.begin()+17; i != name.begin()+21; ++i) {
-        if(*i >'9' || *i <'0'){
+        if (*i >'9' || *i <'0'){
             break;
         }
         _date_year+= *i;
