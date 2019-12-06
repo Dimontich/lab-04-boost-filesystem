@@ -25,8 +25,6 @@ DirectoryAnalyzer::DirectoryAnalyzer(boost::filesystem::path _path) {
             std::cout << "0";
         std::cout << i->date[3] << std::endl;
     }
-
-
 }
 
 void DirectoryAnalyzer::spacePower(size_t tab){
@@ -36,7 +34,6 @@ void DirectoryAnalyzer::spacePower(size_t tab){
 
 void DirectoryAnalyzer::is_laster
 (std::vector <int> _new_date, boost::filesystem::path _new_p, FileInfo &data){
-
     if (_new_date[1] > data.date[1]){
         data.date[0] = _new_date[0];
         data.date[1] = _new_date[1];
@@ -71,7 +68,7 @@ bool DirectoryAnalyzer::correctDate(std::vector <int> _date){
     if (_date.size() != 4){
         return false;
     }
-    if (_date[0] == -1 || _date[1] = =-1 || _date[2] == -1 || _date[3] == -1){
+    if (_date[0] == -1 || _date[1] == -1 || _date[2] == -1 || _date[3] == -1){
         return false;
     }
     return true;
