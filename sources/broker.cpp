@@ -7,8 +7,10 @@ DirectoryAnalyzer::DirectoryAnalyzer(boost::filesystem::path _path) {
     std::string pth = _path.stem().string();
     _DirectoryAnalyzer(_path, 0, pth);
 
-    for (std::vector<FileInfo>::iterator i = _value.begin();
-    i != _value.end(); ++i) {
+    for (std::vector<FileInfo>::iterator
+    i = _value.begin();
+    i != _value.end(); ++i)
+    {
 
         std::cout << " broker: " << i->_new.branch_path().string()
         << "        account:  " << i->date[0] <<
