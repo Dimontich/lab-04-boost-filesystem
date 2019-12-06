@@ -12,12 +12,12 @@ DirectoryAnalyzer::DirectoryAnalyzer(boost::filesystem::path _path) {
 
         std::cout << " broker: " << i->_new.branch_path().string()
         << "        account:  " << i->date[0] <<
-                  "             files:  " << i->counter << "         last date:  " <<
-                  i->date[1] <<".";
+                  "             files:  " << i-> counter << "         last date:  " <<
+                  i->date[1] << ".";
         if(i->date[2]<10)
             std::cout<<"0";
 
-        std::cout <<i->date[2] <<".";
+        std::cout << i->date[2] << ".";
         if(i->date[3]<10)
             std::cout<<"0";
         std::cout << i->date[3] << std::endl;
