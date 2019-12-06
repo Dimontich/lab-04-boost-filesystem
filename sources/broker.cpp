@@ -1,3 +1,5 @@
+// Copyright 2019 Dimontich
+
 #include "../include/broker.h"
 DirectoryAnalyzer::DirectoryAnalyzer(boost::filesystem::path _path) {
     if (_path == " ") {
