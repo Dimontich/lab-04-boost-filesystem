@@ -61,9 +61,7 @@ void DirectoryAnalyzer::is_laster
         data._new = _new_p;
         data._new = _new_p;
     }
-
 }
-
 bool DirectoryAnalyzer::correctDate(std::vector <int> _date){
     if (_date.size() != 4){
         return false;
@@ -76,7 +74,6 @@ bool DirectoryAnalyzer::correctDate(std::vector <int> _date){
 
 void DirectoryAnalyzer::_DirectoryAnalyzer
 (boost::filesystem::path p, size_t tab, std::string const &pth){
-
     FileInfo value;
     value.date.push_back(-1);
     value.date.push_back(-1);
@@ -85,7 +82,6 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
     value.counter = 0;
 
     try {
-
         //const boost::filesystem::path p{path_to_file};
         for (const boost::filesystem::directory_entry& x :
         boost::filesystem::directory_iterator{p}) {
@@ -136,10 +132,7 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
 
 }
 
-
 std::vector <int> DirectoryAnalyzer::checkNameFile(std::string name){
-
-
 
     std::vector <int> value;
     if (name.size() != 25){
