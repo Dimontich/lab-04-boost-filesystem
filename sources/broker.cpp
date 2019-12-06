@@ -34,7 +34,8 @@ void DirectoryAnalyzer::spacePower(size_t tab){
     std::cout << "     ";
 }
 
-void DirectoryAnalyzer::is_laster(std::vector <int> _new_date, boost::filesystem::path _new_p, FileInfo &data){
+void DirectoryAnalyzer::is_laster
+(std::vector <int> _new_date, boost::filesystem::path _new_p, FileInfo &data){
 
     if (_new_date[1] > data.date[1]){
         data.date[0] = _new_date[0];
@@ -76,7 +77,8 @@ bool DirectoryAnalyzer::correctDate(std::vector <int> _date){
     return true;
 }
 
-void DirectoryAnalyzer::_DirectoryAnalyzer(boost::filesystem::path p, size_t tab, std::string const &pth){
+void DirectoryAnalyzer::_DirectoryAnalyzer
+(boost::filesystem::path p, size_t tab, std::string const &pth){
 
     FileInfo value;
     value.date.push_back(-1);
@@ -88,15 +90,22 @@ void DirectoryAnalyzer::_DirectoryAnalyzer(boost::filesystem::path p, size_t tab
     try {
 
         //const boost::filesystem::path p{path_to_file};
-        for (const boost::filesystem::directory_entry& x : boost::filesystem::directory_iterator{p}) {
+        for (const boost::filesystem::directory_entry& x :
+        boost::filesystem::directory_iterator{p}) {
+
             if (boost::filesystem::is_regular_file(x)) {
-                std::vector <int> _create_data = DirectoryAnalyzer::checkNameFile(x.path().stem().string());
+                std::vector <int> _create_data =
+
+                        DirectoryAnalyzer::checkNameFile(x.path().stem().string());
 
                 if (correctDate(_create_data)) {
 
                     DirectoryAnalyzer::spacePower(tab);
                     std::cout << pth << "  " << x.path().stem().string() <<".txt" << std::endl;
-                    is_laster(DirectoryAnalyzer::checkNameFile(x.path().stem().string()) , x ,value);
+
+                    is_laster
+                    (DirectoryAnalyzer::checkNameFile(x.path().stem().string()) , x ,value);
+
                     value.counter++;
                 }
             } else if (boost::filesystem::is_directory(x)) {
