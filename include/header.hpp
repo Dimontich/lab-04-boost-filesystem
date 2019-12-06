@@ -1,7 +1,7 @@
 
 #ifndef INCLUDE_HEADER_HPP_
 #define INCLUDE_HEADER_HPP_
-
+#include "vector"
 struct FileInfo
 {
     boost::filesystem::path _new;//путь

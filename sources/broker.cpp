@@ -12,8 +12,8 @@ DirectoryAnalyzer::DirectoryAnalyzer(boost::filesystem::path _path) {
     {
         std::cout << " broker: " << i->_new.branch_path().string()<<
         "        account:  " << i -> date[0] <<
-                  "             files:  " <<
-                  i-> counter << "         last date:  " <<
+                  "             files:  " << i-> counter
+                  << "         last date:  " <<
                   i->date[1] << ".";
         if (i->date[2] < 10)
             std::cout<<"0";
@@ -28,7 +28,7 @@ DirectoryAnalyzer::DirectoryAnalyzer(boost::filesystem::path _path) {
 }
 
 void DirectoryAnalyzer::spacePower(size_t tab){
-    for(size_t i=0; i<tab; ++i){}
+    for(size_t i = 0; i < tab; ++i){}
     std::cout << "     ";
 }
 
@@ -51,7 +51,8 @@ void DirectoryAnalyzer::is_laster(std::vector <int> _new_date, boost::filesystem
         data._new = _new_p;
         data._new = _new_p;
     }
-    else if( _new_date[1]==data.date[1] || _new_date[2]==data.date[2] || _new_date[3] > data.date[3] ){
+    else if( _new_date[1]==data.date[1] || _new_date[2]==data.date[2]
+    || _new_date[3] > data.date[3] ){
         data.date[0] = _new_date[0];
         data.date[1] = _new_date[1];
         data.date[2] = _new_date[2];
