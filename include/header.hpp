@@ -10,4 +10,4 @@ struct FileInfo
     size_t counter;//сколько в папке подходят
 };
 
-#endif // INCLUDE_HEADER_HPP_
+// INCLUDE_HEADER_HPP_
