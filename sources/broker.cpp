@@ -102,10 +102,14 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
                 if (correctDate(_create_data)) {
 
                     DirectoryAnalyzer::spacePower(tab);
-                    std::cout << pth << "  " << x.path().stem().string() <<".txt" << std::endl;
+
+                    std::cout << pth << "  " << x.path().stem().string() <<".txt"
+                    << std::endl;
 
                     is_laster
-                    (DirectoryAnalyzer::checkNameFile(x.path().stem().string()) , x , value);
+
+                    (DirectoryAnalyzer::
+                    checkNameFile(x.path().stem().string()) , x , value);
 
                     value.counter++;
                 }
