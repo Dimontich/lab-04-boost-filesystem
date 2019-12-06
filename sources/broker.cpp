@@ -86,7 +86,6 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
         //const boost::filesystem::path p{path_to_file};
         for (const boost::filesystem::directory_entry& x :
         boost::filesystem::directory_iterator{p}) {
-
             if (boost::filesystem::is_regular_file(x)) {
                 std::vector <int> _create_data =
 
@@ -94,14 +93,11 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
                         checkNameFile(x.path().stem().string());
 
                 if (correctDate(_create_data)) {
-
                     DirectoryAnalyzer::spacePower(tab);
-
                     std::cout << pth << "  " << x.path().stem().string()
                     <<".txt"<< std::endl;
 
                     is_laster
-
                     (DirectoryAnalyzer::
                     checkNameFile(x.path().stem().string()) , x , value);
 
@@ -119,7 +115,6 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
                 std::cout << "Error";
                 break;
             }
-
         }
         if (value.counter != 0){
             _value.push_back(value);
@@ -132,9 +127,7 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
     }
 
 }
-
 std::vector <int> DirectoryAnalyzer::checkNameFile(std::string name){
-
     std::vector <int> value;
     if (name.size() != 25){
         value.push_back(-1);
@@ -149,8 +142,6 @@ std::vector <int> DirectoryAnalyzer::checkNameFile(std::string name){
         value.push_back(-1);
         return value;
     }
-
-
     std::string accountNumber_;
     for (auto i = name.begin()+8; i != name.end(); ++i){
         if (*i >'9' || *i <'0'){
