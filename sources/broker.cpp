@@ -43,7 +43,6 @@ void DirectoryAnalyzer::is_laster
         data._new = _new_p;
     }
     else if ( _new_date[1] == data.date[1] ||_new_date[2] > data.date[2] ){
-
         data.date[0] = _new_date[0];
         data.date[1] = _new_date[1];
         data.date[2] = _new_date[2];
