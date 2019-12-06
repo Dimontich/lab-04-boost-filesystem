@@ -1,5 +1,4 @@
 // Copyright 2019 Dimontich
-
 #ifndef INCLUDE_HEADER_HPP_
 #define INCLUDE_HEADER_HPP_
 #include "vector"
@@ -10,4 +9,4 @@ struct FileInfo
     size_t counter;//сколько в папке подходят
 };
 
-// INCLUDE_HEADER_HPP_
+#endif // INCLUDE_HEADER_HPP_

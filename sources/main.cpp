@@ -1,5 +1,4 @@
 // Copyright 2019 Dimontich
-
 #include <boost/filesystem.hpp>
 #include "../include/broker.h"
 
