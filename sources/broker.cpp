@@ -103,8 +103,8 @@ void DirectoryAnalyzer::_DirectoryAnalyzer
 
                     DirectoryAnalyzer::spacePower(tab);
 
-                    std::cout << pth << "  " << x.path().stem().string() <<".txt"
-                    << std::endl;
+                    std::cout << pth << "  " << x.path().stem().string()
+                    <<".txt"<< std::endl;
 
                     is_laster
 
