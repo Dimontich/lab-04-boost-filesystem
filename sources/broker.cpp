@@ -197,6 +197,5 @@ std::vector <int> DirectoryAnalyzer::checkNameFile(std::string name){
     value.push_back(boost::lexical_cast<int>(_date_day));//сборка новой строки
 
     return value;//
-
 }
 

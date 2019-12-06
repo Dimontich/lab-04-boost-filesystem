@@ -2,7 +2,7 @@
 #include <boost/filesystem.hpp>
 #include "../include/broker.h"
 
-using namespace boost;
+
 
 int main(int argc, char *argv[]){
     boost::filesystem::path path = ".";
