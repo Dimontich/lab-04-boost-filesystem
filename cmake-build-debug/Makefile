@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dmitrij/lab-04-boost-filesystem/cmake-build-debug/CMakeFiles /Users/dmitrij/lab-04-boost-filesystem/cmake-build-debug/CMakeFiles/progress.marks
@@ -109,6 +120,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
 #=============================================================================
 # Target rules for targets named lab04
@@ -177,6 +201,33 @@ sources/main.cpp.s:
 	$(MAKE) -f CMakeFiles/lab04.dir/build.make CMakeFiles/lab04.dir/sources/main.cpp.s
 .PHONY : sources/main.cpp.s
 
+tests/test.o: tests/test.cpp.o
+
+.PHONY : tests/test.o
+
+# target to build an object file
+tests/test.cpp.o:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.o
+.PHONY : tests/test.cpp.o
+
+tests/test.i: tests/test.cpp.i
+
+.PHONY : tests/test.i
+
+# target to preprocess a source file
+tests/test.cpp.i:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.i
+.PHONY : tests/test.cpp.i
+
+tests/test.s: tests/test.cpp.s
+
+.PHONY : tests/test.s
+
+# target to generate assembly for a file
+tests/test.cpp.s:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.s
+.PHONY : tests/test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -185,6 +236,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... tests"
 	@echo "... lab04"
 	@echo "... sources/broker.o"
 	@echo "... sources/broker.i"
@@ -192,6 +245,9 @@ help:
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"
+	@echo "... tests/test.o"
+	@echo "... tests/test.i"
+	@echo "... tests/test.s"
 .PHONY : help
 
 

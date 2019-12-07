@@ -6,5 +6,5 @@ CXX_FLAGS =  -pedantic -Werror -Wall -Wextra -Wno-unused-command-line-argument -
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/dmitrij/lab-04-boost-filesystem/include -isystem /Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include 
+CXX_INCLUDES = -isystem /Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include 
 

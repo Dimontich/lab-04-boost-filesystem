@@ -79,6 +79,7 @@ tests_EXTERNAL_OBJECTS =
 
 tests: CMakeFiles/tests.dir/tests/test.cpp.o
 tests: CMakeFiles/tests.dir/build.make
+tests: /Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/lib/libgtestd.a
 tests: /Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/lib/libgtest_maind.a
 tests: /Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/lib/libgtestd.a
 tests: CMakeFiles/tests.dir/link.txt

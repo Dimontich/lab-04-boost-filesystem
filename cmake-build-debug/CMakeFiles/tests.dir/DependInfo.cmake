@@ -10,7 +10,6 @@ set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../include"
   "/Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include"
   )
 
