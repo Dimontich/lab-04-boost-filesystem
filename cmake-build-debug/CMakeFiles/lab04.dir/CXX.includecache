@@ -764,6 +764,18 @@ boost/config.hpp
 memory
 -
 
+/Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include/boost/filesystem.hpp
+boost/filesystem/config.hpp
+-
+boost/filesystem/path.hpp
+-
+boost/filesystem/operations.hpp
+-
+boost/filesystem/convenience.hpp
+-
+boost/filesystem/string_file.hpp
+-
+
 /Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include/boost/filesystem/config.hpp
 boost/config.hpp
 -
@@ -772,6 +784,32 @@ boost/system/api_config.hpp
 boost/detail/workaround.hpp
 -
 boost/config/auto_link.hpp
+-
+
+/Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include/boost/filesystem/convenience.hpp
+boost/config.hpp
+-
+boost/filesystem/operations.hpp
+-
+boost/system/error_code.hpp
+-
+boost/config/abi_prefix.hpp
+-
+boost/config/abi_suffix.hpp
+-
+
+/Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include/boost/filesystem/fstream.hpp
+boost/config.hpp
+-
+boost/filesystem/path.hpp
+-
+iosfwd
+-
+fstream
+-
+boost/config/abi_prefix.hpp
+-
+boost/config/abi_suffix.hpp
 -
 
 /Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include/boost/filesystem/operations.hpp
@@ -892,6 +930,14 @@ boost/assert.hpp
 boost/config/abi_prefix.hpp
 -
 boost/config/abi_suffix.hpp
+-
+
+/Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include/boost/filesystem/string_file.hpp
+string
+-
+boost/filesystem/fstream.hpp
+-
+boost/filesystem/operations.hpp
 -
 
 /Users/dmitrij/.hunter/_Base/9a3594a/7e73122/c351cc1/Install/include/boost/functional/hash_fwd.hpp
@@ -7277,6 +7323,12 @@ vector
 /Users/dmitrij/lab-04-boost-filesystem/include/vector
 
 /Users/dmitrij/lab-04-boost-filesystem/sources/broker.cpp
+../include/broker.h
+/Users/dmitrij/lab-04-boost-filesystem/include/broker.h
+
+/Users/dmitrij/lab-04-boost-filesystem/sources/main.cpp
+boost/filesystem.hpp
+-
 ../include/broker.h
 /Users/dmitrij/lab-04-boost-filesystem/include/broker.h
 
